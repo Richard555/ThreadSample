@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 	private TextView text;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Toast.makeText(MainActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
 				new Thread(new Runnable() {
 					@Override
 					public void run() {
@@ -54,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 				super.handleMessage(msg);
 			}
 		};
+
+
 	}
 
 }
